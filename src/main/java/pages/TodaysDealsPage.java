@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class TodaysDealsPage {
 	
 	private WebDriver driver;
-	int productIndex = 26;
+	int productIndex = 6;
 	
 	By headphonesCheckBox = By.xpath("//span[@class='CheckboxFilter-module__checkboxLabel_21MUk0e7QdlZKH5Xcwap-F'][contains(.,'Headphones')]");
 	By groceryCheckBox = By.xpath("//span[@class='CheckboxFilter-module__checkboxLabel_21MUk0e7QdlZKH5Xcwap-F'][contains(.,'Grocery')]");

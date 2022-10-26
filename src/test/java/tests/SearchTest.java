@@ -19,13 +19,11 @@ public class SearchTest extends TestBase {
 	public void userCanAddItemToCart() {
 	 SearchResultsPage searchPageObj = homePageObj.typeTextInSearchBox(prop.getProperty("ProductName"));
 	 String firstItemName = searchPageObj.getfirstItemName();
-	 System.out.println(firstItemName);
 	 ItemDetailsPage itemDetailsObj = searchPageObj.selectFirstItem();
 	 itemDetailsObj.addItemToCart();
 	 CartPage cartPageObj = itemDetailsObj.goToCart();
 	 String verifyItemName = cartPageObj.getItemName();
-	 System.out.println(verifyItemName);
-	 Assert.assertTrue(firstItemName.startsWith(verifyItemName.subSequence(0, 10).toString()));
+	 Assert.assertTrue(firstItemName.contains(verifyItemName.subSequence(0, 10).toString()));
 	}
 	
 	
